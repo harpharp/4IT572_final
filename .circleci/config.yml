@@ -20,7 +20,7 @@ jobs:
      steps:
         - attach_workspace:
            at: .
-        - command: ssh -i "key.pem" ubuntu@ec2-100-25-31-89.compute-1.amazonaws.com -oStrictHostKeyChecking=no 'cd 4IT572_ansible/ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook ec2_deploy.yml --user ubuntu --key-file yes.pem --vault-password-file vault-password-file'
+        - commands: ssh -i "key.pem" ubuntu@ec2-100-25-31-89.compute-1.amazonaws.com -oStrictHostKeyChecking=no 'cd 4IT572_ansible/ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook ec2_deploy.yml --user ubuntu --key-file yes.pem --vault-password-file vault-password-file'
 
 workflows:
   version: 2.1

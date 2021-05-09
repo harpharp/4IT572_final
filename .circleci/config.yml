@@ -21,7 +21,7 @@ jobs:
         - attach_workspace:
            at: .
         - run:
-           command: ssh -i "key.pem" ubuntu@ec2-3-94-197-156.compute-1.amazonaws.com -oStrictHostKeyChecking=no 'cd 4IT572_ansible_eshop/ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook ec2_deploy.yml --user ubuntu --key-file yes.pem -e 'ansible_python_interpreter=/usr/bin/python3''
+           command: ssh ubuntu@ec2-3-94-197-156.compute-1.amazonaws.com -oStrictHostKeyChecking=no 'cd 4IT572_ansible_eshop/ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook ec2_deploy.yml --user ubuntu --key-file yes.pem -e 'ansible_python_interpreter=/usr/bin/python3''
 
 workflows:
   version: 2.1 

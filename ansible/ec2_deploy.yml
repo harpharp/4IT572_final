@@ -77,7 +77,7 @@
        become: yes
      - name: Get project files from git
        git:
-         repo: 'https://github.com/harpharp/4IT572_circleci.git'
+         repo: 'https://github.com/harpharp/4IT572_final.git'
          dest: ./app
      - name: Build docker with eshop
        shell: cd app && docker build -t myeshop:latest .
